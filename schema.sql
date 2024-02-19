@@ -11,7 +11,7 @@ create table companies(
 
 create table participation(
   id serial primary key,
-  firts_name text not null,
+  first_name text not null,
   last_name text not null,
   participation text not null,
   company_id integer not null,
