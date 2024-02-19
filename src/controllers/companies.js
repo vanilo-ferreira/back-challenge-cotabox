@@ -18,18 +18,18 @@ const registerCompany = async (req, res) => {
 
   try {
 
-    const { rowCount: quantidadeEmpresas } = await conexao.query('select * from companies where email = $1', [email]);
+    const { rowCount: numberCompanies } = await conexao.query('select * from companies where email = $1', [email]);
 
-    if (quantidadeEmpresas > 0) {
+    if (numberCompanies > 0) {
       return res.status(400).json("O email já existe!");
     }
 
     const encryptedPassword = await bcrypt.hash(password, 10);
 
     const query = 'insert into companies(name, email, password) values($1, $2, $3)';
-    const empresa = await conexao.query(query, [name, email, encryptedPassword]);
+    const company = await conexao.query(query, [name, email, encryptedPassword]);
 
-    if (empresa.rowCount === 0) {
+    if (company.rowCount === 0) {
       return res.status(400).json("A empresa não foi cadastrada.");
     }
 
