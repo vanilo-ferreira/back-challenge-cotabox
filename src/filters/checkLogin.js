@@ -22,7 +22,7 @@ const checkLogin = async (req, res, next) => {
       return res.status(404).json("Empresa não encontrada!");
     }
 
-    const { senha, ...company } = rows[0];
+    const { password, ...company } = rows[0];
 
     req.company = company;
 
