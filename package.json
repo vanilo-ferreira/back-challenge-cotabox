@@ -4,7 +4,7 @@
   "description": "API desenvolvida para o challenge cotabox",
   "main": "./src/index.js",
   "engines": {
-    "node": "20.11.0"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node ./src/index.js",
