@@ -41,6 +41,11 @@ const registerCompany = async (req, res) => {
 
 }
 
+const CheckProfile = async (req, res) => {
+  return res.status(200).json(req.company);
+}
+
 module.exports = {
-  registerCompany
+  registerCompany,
+  CheckProfile
 }
