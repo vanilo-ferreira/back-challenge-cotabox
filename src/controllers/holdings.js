@@ -63,6 +63,21 @@ const addParticipation = async (req, res) => {
   }
 }
 
+const obterParticipation = async (req, res) => {
+  const { company } = req;
+
+  try {
+
+    const query = `select * from holdings where company_id = $1`;
+    const { rows: holdings } = await conexao.query(query, [company.id]);
+
+    return res.status(200).json(holdings);
+  } catch (error) {
+    return res.status(400).json(error.message);
+  }
+}
+
 module.exports = {
-  addParticipation
+  addParticipation,
+  obterParticipation
 }
