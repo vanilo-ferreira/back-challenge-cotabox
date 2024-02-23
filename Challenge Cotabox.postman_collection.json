@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "fcdffde8-d000-4575-aec7-5680b7a055d1",
+		"name": "Challenge Cotabox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33041104"
+	},
+	"item": [
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "/companies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Empresa Tal\",\r\n  \"email\": \"fulano@email.com\",\r\n  \"password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://back-challenge-cotabox.up.railway.app/companies",
+							"protocol": "https",
+							"host": [
+								"back-challenge-cotabox",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"fulano@email.com\",\r\n  \"password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://back-challenge-cotabox.up.railway.app/login",
+							"protocol": "https",
+							"host": [
+								"back-challenge-cotabox",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "/profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://back-challenge-cotabox.up.railway.app/profile",
+							"protocol": "https",
+							"host": [
+								"back-challenge-cotabox",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Holdings",
+			"item": [
+				{
+					"name": "/holdings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"Carlos\",\r\n  \"last_name\": \"Moura\",\r\n  \"participation\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://back-challenge-cotabox.up.railway.app/holdings",
+							"protocol": "https",
+							"host": [
+								"back-challenge-cotabox",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"holdings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/holdings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://back-challenge-cotabox.up.railway.app/holdings",
+							"protocol": "https",
+							"host": [
+								"back-challenge-cotabox",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"holdings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA4NjQ5ODk5LCJleHAiOjE3MDg2Nzg2OTl9.jrGZx5q2yqnVtyTPJBKMRMvGtgwhUVEQbzUnXA0ZHIo"
+		}
+	]
+}
