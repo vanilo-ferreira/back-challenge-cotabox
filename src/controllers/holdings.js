@@ -63,7 +63,7 @@ const addParticipation = async (req, res) => {
   }
 }
 
-const obterParticipation = async (req, res) => {
+const getShares = async (req, res) => {
   const { company } = req;
 
   try {
@@ -79,5 +79,5 @@ const obterParticipation = async (req, res) => {
 
 module.exports = {
   addParticipation,
-  obterParticipation
+  getShares
 }
