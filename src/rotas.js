@@ -12,10 +12,10 @@ rotas.post('/login', login.login);
 
 rotas.use(checkLogin);
 
-rotas.get('/perfil', companies.CheckProfile);
+rotas.get('/profile', companies.checkProfile);
 
 rotas.post('/holdings', holdings.addParticipation);
-rotas.get('/holdings', holdings.obterParticipation);
+rotas.get('/holdings', holdings.getShares);
 
 
 module.exports = rotas;
