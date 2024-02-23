@@ -124,6 +124,7 @@ Ela:
   - last_name
   - participation
 - Cadastra o colaborador e sua porcentagem de participação no banco de dados para o id do empresa logada
+- Valida se o colaborador cadastro tem dado cadastro, se sim, apenas a variável participation é alterado, somando o valor que deseja adicionar + o que está no banco de dados. 
 
 Exemplo do body a ser enviado:
 
